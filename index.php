@@ -82,14 +82,12 @@ class Rgb
 
      public function equals($object1, $object2): bool
     {
-        if($object1 !== $object2) {
-            echo "Об'єкти не рівні";
-            return false;
-
-        };
-        echo "Об'єкти рівні";
-        return true;
-
+        return
+           $object1->getRed() === $object2->getRed()
+           &&
+           $object1->getBlue() === $object2->getBlue()
+           &&
+           $object1->getGreen() === $object2->getGreen();
     }
 
     static public function random(): Rgb
